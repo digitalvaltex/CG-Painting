@@ -1,0 +1,192 @@
+# === ALLEEN LOKAAL — NIET VOOR HOSTING ===
+# Hostinger (en sommige migraties) weigeren .py in ZIP. Daarom staat dit als .txt.
+# Lokaal: kopieer dit bestand naar app.py in deze map, daarna:
+#   pip install -r requirements.txt
+#   python app.py
+# Zie ook README.txt in deze map.
+
+# CG Painting – local server: serve site + send form emails via Gmail SMTP
+# Run from project root: python local-dev/app.py
+# Then open http://127.0.0.1:5000 and submit form to test email to digitalvaltex@gmail.com
+
+import os
+import re
+import smtplib
+import email.utils
+from datetime import datetime, timedelta, timezone
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:
+    ZoneInfo = None
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+
+from flask import Flask, request, send_from_directory, jsonify, redirect
+
+# Serve project root (parent of local-dev)
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+app = Flask(__name__, static_folder=ROOT, static_url_path="")
+
+TO_EMAIL = "digitalvaltex@gmail.com"
+TYPE_LABELS = {
+    "schilderwerken": "Schilderwerken",
+    "dunpleisteren": "Dunpleisteren",
+    "behangen": "Behangen",
+    "decor": "Decor",
+    "renovatie": "Renovatie werken",
+}
+
+
+def build_html_email(naam, telefoon, email_addr, postcode, stad, type_werk, type_werk_label, bericht, reply_link, call_link="#", calendar_url="#"):
+    return f"""<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nieuw bericht</title>
+</head>
+<body style="margin:0; padding:0; font-family: 'Segoe UI', Arial, sans-serif; background:#1e293b;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px; margin:0 auto; padding:24px 16px;">
+    <tr>
+      <td style="background:linear-gradient(135deg, #0E7AD9 0%, #085091 100%); border-radius:12px 12px 0 0; padding:28px 24px; text-align:center;">
+        <div style="color:#ffffff; font-size:22px; font-weight:700; letter-spacing:0.02em;">CG Painting</div>
+        <div style="color:rgba(255,255,255,0.9); font-size:14px; margin-top:4px;">Professionele schilderwerken</div>
+        <h1 style="color:#ffffff; font-size:20px; font-weight:700; margin:20px 0 0;">Nieuw bericht van {naam}</h1>
+      </td>
+    </tr>
+    <tr>
+      <td style="background:#ffffff; padding:28px 24px; border-radius:0 0 12px 12px; box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+        <p style="color:#374151; font-size:15px; margin:0 0 20px;">Je hebt een nieuw bericht ontvangen via jouw website:</p>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:14px; color:#1f2937;">
+          <tr><td style="padding:6px 0; border-bottom:1px solid #f3f4f6;"><strong>Naam:</strong></td></tr>
+          <tr><td style="padding:6px 0 14px;">{naam}</td></tr>
+          <tr><td style="padding:6px 0; border-bottom:1px solid #f3f4f6;"><strong>E-mail:</strong></td></tr>
+          <tr><td style="padding:6px 0 14px;"><a href="mailto:{email_addr}" style="color:#0E7AD9;">{email_addr}</a></td></tr>
+          <tr><td style="padding:6px 0; border-bottom:1px solid #f3f4f6;"><strong>Telefoon:</strong></td></tr>
+          <tr><td style="padding:6px 0 14px;">{telefoon}</td></tr>
+          <tr><td style="padding:6px 0; border-bottom:1px solid #f3f4f6;"><strong>Postcode:</strong></td></tr>
+          <tr><td style="padding:6px 0 14px;">{postcode}</td></tr>
+          <tr><td style="padding:6px 0; border-bottom:1px solid #f3f4f6;"><strong>Stad:</strong></td></tr>
+          <tr><td style="padding:6px 0 14px;">{stad}</td></tr>
+          <tr><td style="padding:6px 0; border-bottom:1px solid #f3f4f6;"><strong>Type werk:</strong></td></tr>
+          <tr><td style="padding:6px 0 14px;">{type_werk_label}</td></tr>
+        </table>
+        <p style="margin:24px 0 0; text-align:center;">
+          <a href="{reply_link}" style="display:inline-block; padding:12px 20px; margin:4px; background:#0E7AD9; color:#ffffff; text-decoration:none; font-weight:700; font-size:14px; border-radius:8px;">Antwoord klant</a>
+          <a href="{call_link}" style="display:inline-block; padding:12px 20px; margin:4px; background:#059669; color:#ffffff; text-decoration:none; font-weight:700; font-size:14px; border-radius:8px;">Bel klant</a>
+          <a href="{calendar_url}" style="display:inline-block; padding:12px 20px; margin:4px; background:#7c3aed; color:#ffffff; text-decoration:none; font-weight:700; font-size:14px; border-radius:8px;">In agenda zetten (morgen bellen)</a>
+        </p>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:14px; color:#1f2937; margin-top:20px;">
+          <tr><td style="padding:6px 0; border-bottom:1px solid #f3f4f6;"><strong>Bericht:</strong></td></tr>
+          <tr><td style="padding:6px 0 14px; white-space:pre-wrap;">{bericht.replace(chr(10), '<br>')}</td></tr>
+        </table>
+        <p style="margin:20px 0 0; font-size:12px; color:#6b7280; text-align:center;">CG Painting – offerteformulier</p>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>"""
+
+
+@app.route("/")
+def index():
+    return send_from_directory(ROOT, "index.html")
+
+
+@app.route("/<path:path>")
+def static_file(path):
+    if path == "send.php":
+        return "", 404
+    return send_from_directory(ROOT, path)
+
+
+@app.route("/send.php", methods=["POST"])
+def send_mail():
+    naam = (request.form.get("naam") or "").strip()
+    telefoon = (request.form.get("telefoon") or "").strip()
+    email_addr = (request.form.get("email") or "").strip()
+    postcode = (request.form.get("postcode") or "").strip()
+    stad = (request.form.get("stad") or "").strip()
+    type_werk = (request.form.get("type_werk") or "").strip()
+    bericht = (request.form.get("bericht") or "").strip()
+
+    type_werk_label = TYPE_LABELS.get(type_werk, type_werk)
+    subject = f"Nieuw bericht van {naam}"
+    reply_subject = "Re: " + subject
+    reply_link = f"mailto:{email_addr}?subject={email.utils.quote(reply_subject)}" if email_addr else "#"
+
+    telefoon_tel = re.sub(r"[^0-9+]", "", telefoon)
+    if telefoon_tel and telefoon_tel[0] != "+":
+        telefoon_tel = ("+32" + telefoon_tel[1:] if telefoon_tel.startswith("0") else "+32" + telefoon_tel)
+    call_link = f"tel:{telefoon_tel}" if telefoon_tel else "#"
+
+    calendar_title = f"Bel {naam} - CG Painting"
+    calendar_details = f"Klant: {naam}\nTelefoon: {telefoon}\nE-mail: {email_addr}\nType werk: {type_werk_label}\n\nBericht:\n{bericht}"
+    try:
+        if ZoneInfo:
+            tz = ZoneInfo("Europe/Brussels")
+            tomorrow = (datetime.now(tz) + timedelta(days=1)).replace(hour=10, minute=0, second=0, microsecond=0)
+            start_utc = tomorrow.astimezone(timezone.utc)
+            end_utc = start_utc + timedelta(minutes=15)
+            start_str = start_utc.strftime("%Y%m%dT%H%M%SZ")
+            end_str = end_utc.strftime("%Y%m%dT%H%M%SZ")
+            calendar_url = f"https://calendar.google.com/calendar/render?action=TEMPLATE&text={email.utils.quote(calendar_title)}&dates={start_str}/{end_str}&details={email.utils.quote(calendar_details)}"
+        else:
+            calendar_url = f"https://calendar.google.com/calendar/render?action=TEMPLATE&text={email.utils.quote(calendar_title)}&details={email.utils.quote(calendar_details)}"
+    except Exception:
+        calendar_url = f"https://calendar.google.com/calendar/render?action=TEMPLATE&text={email.utils.quote(calendar_title)}&details={email.utils.quote(calendar_details)}"
+
+    html = build_html_email(
+        naam, telefoon, email_addr, postcode, stad, type_werk, type_werk_label, bericht,
+        reply_link, call_link, calendar_url
+    )
+
+    msg = MIMEMultipart("mixed")
+    msg["Subject"] = subject
+    msg["From"] = "Valtex Digital <no-reply@valtexdigital.com>"
+    msg["To"] = TO_EMAIL
+    msg["Reply-To"] = email_addr or TO_EMAIL
+
+    msg.attach(MIMEText(html, "html", "utf-8"))
+
+    if "fotos[]" in request.files:
+        files = request.files.getlist("fotos[]")
+    elif "fotos" in request.files:
+        files = [request.files["fotos"]]
+    else:
+        files = []
+    for f in files:
+        if f and f.filename:
+            part = MIMEBase("application", "octet-stream")
+            part.set_payload(f.read())
+            encoders.encode_base64(part)
+            part.add_header("Content-Disposition", "attachment", filename=(f.filename or "foto"))
+            msg.attach(part)
+
+    gmail_user = os.environ.get("GMAIL_USER", TO_EMAIL)
+    gmail_pass = os.environ.get("GMAIL_APP_PASSWORD")
+    if not gmail_pass:
+        return jsonify({"ok": False, "error": "GMAIL_APP_PASSWORD niet geconfigureerd. Zet .env of omgevingsvariabele."}), 500
+
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
+            s.login(gmail_user, gmail_pass)
+            s.send_message(msg)
+    except Exception as e:
+        return jsonify({"ok": False, "error": "Verzenden mislukt: " + str(e)}), 500
+
+    if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        return jsonify({"ok": True, "message": "Bedankt! We nemen zo snel mogelijk contact op."})
+    return redirect("/index.html#contact?sent=1", code=302)
+
+
+if __name__ == "__main__":
+    try:
+        from dotenv import load_dotenv
+        load_dotenv(ROOT)
+        load_dotenv(os.path.dirname(__file__))
+    except ImportError:
+        pass
+    app.run(host="127.0.0.1", port=5000, debug=True)

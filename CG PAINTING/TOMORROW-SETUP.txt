@@ -1,0 +1,49 @@
+============================================
+  WAT MORGEN TOEVOEGEN (na upload op hosting)
+============================================
+
+1) GOOGLE TAG MANAGER (GTM)
+   - Ga naar https://tagmanager.google.com
+   - Maak een container aan (Web)
+   - Kopieer de twee code-snippets (head + body)
+   - Plak in index.html: het eerste script direct na <head>, het tweede direct na <body>
+   - Via GTM kun je later GA4, conversies, reclame-tracking toevoegen zonder code aan te passen
+
+2) GOOGLE ANALYTICS 4 (GA4)
+   - Ga naar https://analytics.google.com
+   - Maak een property aan voor cgpainting.be
+   - Kopieer je Measurement ID (vorm: G-XXXXXXXXXX)
+   - Optie A: voeg de gtag.js code handmatig in index.html <head>
+   - Optie B (beter): voeg in Google Tag Manager een tag "Google Analytics: GA4 Configuration" toe met je Measurement ID
+
+3) GOOGLE SEARCH CONSOLE
+   - Ga naar https://search.google.com/search-console
+   - Voeg property toe: https://cgpainting.be
+   - Verificatie: kies "HTML-tag" en plak de meta-tag in <head> van index.html, of upload het HTML-bestand
+   - Na verificatie: Sitemaps → voeg toe: https://cgpainting.be/sitemap.xml
+
+4) MICROSOFT CLARITY (optioneel, gratis heatmaps/sessies)
+   - Ga naar https://clarity.microsoft.com
+   - Maak project aan, kopieer het script
+   - Plak vóór </body> in index.html of voeg via GTM toe
+
+5) BETAALDE RECLAME & CONVERSIE-TRACKING
+   - Google Ads: koppel je GA4 property aan Google Ads; zet conversies (bijv. "offerte aangevraagd") in GA4 of via GTM
+   - Facebook/Meta Pixel: als je later Facebook-advertenties doet, voeg de pixel via GTM toe (Custom HTML-tag met de pixelcode)
+   - Belangrijk: vraag in de offerte-formulier een bevestiging ("Bedankt, we bellen u") en track die pagina of een "thank you" event als conversie in GA4/GTM
+
+6) NAP & GOOGLE BUSINESS PROFILE (lokaal SEO)
+   - Maak/claim je Google Business Profile voor CG Painting (Leyssenstraat 1, Oudsbergen)
+   - Vul consistent in: naam, adres, telefoon (0478 78 48 33), website, openingstijden
+   - Voeg foto’s toe (realisaties, team, logo)
+   - Vraag klanten om reviews op Google
+
+============================================
+  Kort overzicht
+============================================
+- GTM        → 1x installeren, daarna alles (GA4, ads, pixels) via GTM
+- GA4        → bezoekers & gedrag
+- Search Console → sitemap indienen, zoekprestaties zien
+- Clarity    → optioneel, sessie-opnames/heatmaps
+- Google Ads + conversies → na koppeling GA4/GTM
+- Google Business Profile → voor "schilderwerken Hasselt" etc. in Google Maps/zoeken

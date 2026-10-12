@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <!-- Google tag (gtag.js) — GA4 + Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDKPB3VG4P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-BDKPB3VG4P");
+    gtag("config", "AW-18045890792");
+  </script>
+  <!-- Google tag (gtag.js) event — Ads: Click_call -->
+  <script>
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === "string") {
+          window.location = url;
+        }
+      };
+      gtag("event", "Click_call", {
+        event_callback: callback,
+        event_timeout: 2000
+      });
+      return false;
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog – CG Painting BV | Tips &amp; inspiratie schilderwerken</title>
+  <meta name="description" content="Tips, inspiratie en praktische gidsen over schilderwerken, dunpleisteren en behangen in Limburg en Vlaams-Brabant. Door CG Painting BV." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cgpainting.be/blog.html" />
+
+  <meta property="og:title" content="Blog – CG Painting BV" />
+  <meta property="og:description" content="Tips en inspiratie over schilderwerken in Limburg &amp; Vlaams-Brabant." />
+  <meta property="og:url" content="https://cgpainting.be/blog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://cgpainting.be/assets/hero-image.png" />
+  <meta property="og:locale" content="nl_BE" />
+  <meta property="og:site_name" content="CG Painting" />
+
+  <link rel="icon" href="assets/cg-painting-logo.png" type="image/png" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --blue: #0E7AD9;
+      --blue-light: #e5f2ff;
+      --blue-dark: #085091;
+      --text-main: #15171a;
+      --text-muted: #6c7280;
+      --border-subtle: #e2e4ea;
+      --footer-bg: #050814;
+      --footer-border: rgba(148, 163, 184, 0.2);
+      --transition-fast: 0.18s ease-out;
+      --site-header-height: 80px;
+    }
+
+    @media (max-width: 960px) {
+      :root { --site-header-height: 72px; }
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      scrollbar-gutter: stable;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", system-ui, sans-serif;
+      background: #eef2f7;
+      color: var(--text-main);
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; }
+
+    .page-shell {
+      min-height: 100vh;
+      background: #eef2f7;
+      padding-top: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 85vw;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    @media (min-width: 1900px) {
+      .container { max-width: 1600px; }
+    }
+
+    .alignfull {
+      width: 100%;
+      max-width: 100vw;
+      margin-left: 0;
+      margin-right: 0;
+      box-sizing: border-box;
+    }
+
+    /* ===== Header (zelfde als homepage) ===== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 40;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      box-shadow: none;
+      transition:
+        transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+        background 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease;
+    }
+
+    .site-header.header--nav-open {
+      z-index: 60;
+      border-bottom-color: transparent !important;
+      box-shadow: none !important;
+    }
+
+    .site-header.header--on-dark {
+      background: transparent;
+      border-bottom-color: transparent;
+      box-shadow: none;
+    }
+
+    .site-header.header--on-dark .brand { color: #ffffff; }
+    .site-header.header--on-dark .brand-mark img { filter: none; }
+    .site-header.header--on-dark .nav-links a { color: rgba(255, 255, 255, 0.92); }
+    .site-header.header--on-dark .nav-links a:hover { color: #ffffff; }
+    .site-header.header--on-dark .nav-toggle-bars span { background: rgba(255, 255, 255, 0.92); }
+
+    .site-header.header--on-dark .nav-cta-phone {
+      background: rgba(255, 255, 255, 0.88);
+      color: #0f172a;
+      border: none;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.95), 0 2px 14px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .site-header.header--on-dark .nav-cta-phone:hover {
+      background: #ffffff;
+      color: #0f172a;
+    }
+
+    .site-header.header--on-dark .nav-cta-phone-icon { color: var(--blue); }
+
+    .site-header.header--solid {
+      background: #ffffff;
+      border-bottom-color: rgba(0, 0, 0, 0.06);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+    }
+
+    .site-header.header--solid .brand { color: #0f172a; }
+    .site-header.header--solid .nav-links a { color: #374151; }
+    .site-header.header--solid .nav-links a:hover { color: #0f172a; }
+    .site-header.header--solid .nav-toggle-bars span { background: rgba(107, 114, 128, 0.75); }
+    .site-header.header--solid .nav-cta-phone {
+      background: #f3f4f6;
+      color: #374151;
+      border: none;
+    }
+    .site-header.header--solid .nav-cta-phone-icon { color: #6b7280; }
+
+    .site-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 80px;
+      padding: 16px 0;
+      gap: 24px;
+    }
+
+    @media (min-width: 1201px) {
+      .site-header-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        align-items: center;
+        justify-content: unset;
+        column-gap: 24px;
+      }
+      .brand { justify-self: start; padding-left: 198px; }
+      .nav { flex: initial; width: auto; justify-self: center; }
+      .nav-ctas { justify-self: end; }
+    }
+
+    .brand {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    .brand-mark {
+      width: 52px;
+      height: 42px;
+      border-radius: 8px;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .nav {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .nav-links a {
+      color: #374151;
+      padding: 6px 0;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover { color: #0f172a; }
+    .nav-links a.is-active { color: var(--blue); font-weight: 600; }
+
+    .nav-ctas {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: none;
+      background: transparent;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .nav-toggle-bars {
+      width: 22px;
+      height: 16px;
+      position: relative;
+    }
+
+    .nav-toggle-bars span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      background: rgba(107, 114, 128, 0.75);
+      transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease;
+    }
+
+    .nav-toggle-bars span:nth-child(1) { top: 0; }
+    .nav-toggle-bars span:nth-child(2) { top: 7px; }
+    .nav-toggle-bars span:nth-child(3) { top: 14px; }
+
+    .nav-toggle.is-open .nav-toggle-bars span:nth-child(1) {
+      top: 7px;
+      transform: rotate(45deg);
+    }
+    .nav-toggle.is-open .nav-toggle-bars span:nth-child(2) { opacity: 0; }
+    .nav-toggle.is-open .nav-toggle-bars span:nth-child(3) {
+      top: 7px;
+      transform: rotate(-45deg);
+    }
+
+    .btn-primary,
+    .site-header .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      cursor: pointer;
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
+
+    .btn-primary:hover,
+    .site-header .btn-primary:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    .nav-cta-phone-icon {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-cta-phone-icon svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .site-header .btn-primary .nav-cta-phone-icon { color: #ffffff; }
+    .site-header .btn-primary .nav-cta-phone-icon svg { fill: #ffffff; }
+
+    .nav-cta-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      color: #374151;
+      background: #f3f4f6;
+      cursor: pointer;
+    }
+
+    @media (max-width: 960px) {
+      .site-header-inner {
+        min-height: 72px;
+        padding: 10px 0;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .nav-toggle { display: flex; }
+      .nav { display: none; }
+      .nav-ctas { display: none; }
+      .site-header-inner {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        column-gap: 12px;
+      }
+      .brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        gap: 8px;
+        font-size: 14px;
+      }
+      .brand-mark {
+        width: 38px;
+        height: 32px;
+      }
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      background: rgba(15, 23, 42, 0.45);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .mobile-menu.mobile-menu--open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .mobile-menu-inner {
+      position: absolute;
+      top: var(--site-header-height);
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      padding: 20px 24px 28px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-menu-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-menu-nav a {
+      padding: 12px 4px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f172a;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .mobile-menu-nav a.is-active { color: var(--blue); }
+
+    .mobile-menu-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mobile-menu-ctas .btn-primary,
+    .mobile-menu-ctas .nav-cta-phone {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* ===== Blog hero ===== */
+    .blog-hero {
+      position: relative;
+      min-height: min(78svh, 640px);
+      display: flex;
+      align-items: flex-end;
+      padding: 0;
+      overflow: hidden;
+      background: #0b1220;
+    }
+
+    .blog-hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(105deg, rgba(5, 8, 20, 0.88) 0%, rgba(5, 8, 20, 0.55) 42%, rgba(5, 8, 20, 0.28) 100%),
+        linear-gradient(180deg, rgba(5, 8, 20, 0.2) 0%, rgba(5, 8, 20, 0.75) 100%),
+        url("assets/project3.jpeg") center 40% / cover no-repeat;
+      transform: scale(1.04);
+      animation: blogHeroZoom 18s ease-out forwards;
+    }
+
+    @keyframes blogHeroZoom {
+      from { transform: scale(1.08); }
+      to { transform: scale(1.02); }
+    }
+
+    .blog-hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: calc(var(--site-header-height) + 56px) 0 64px;
+      color: #ffffff;
+    }
+
+    .blog-hero-copy {
+      max-width: 680px;
+      animation: blogHeroIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes blogHeroIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .blog-brand {
+      margin: 0 0 18px;
+      font-size: clamp(28px, 4.5vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      color: #fff;
+    }
+
+    .blog-eyebrow {
+      display: inline-block;
+      margin: 0 0 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(125, 211, 252, 0.95);
+    }
+
+    .blog-hero-title {
+      margin: 0 0 14px;
+      max-width: 640px;
+      font-size: clamp(26px, 3.8vw, 40px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.18;
+      color: rgba(255, 255, 255, 0.96);
+    }
+
+    .blog-hero-subtitle {
+      margin: 0;
+      max-width: 480px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(226, 232, 240, 0.88);
+    }
+
+    /* ===== Blog content ===== */
+    .blog-section {
+      position: relative;
+      padding: 56px 0 72px;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% 0%, rgba(14, 122, 217, 0.07), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 20%, rgba(8, 80, 145, 0.05), transparent 50%),
+        linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
+    }
+
+    .blog-section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .blog-section-head h2 {
+      margin: 0 0 6px;
+      font-size: clamp(22px, 2.8vw, 30px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #0f172a;
+    }
+
+    .blog-section-head p {
+      margin: 0;
+      max-width: 420px;
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    @media (max-width: 1100px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .blog-card {
+      background: #ffffff;
+      border: 1px solid rgba(226, 228, 234, 0.9);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+
+    .blog-card.is-hidden {
+      display: none;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(14, 122, 217, 0.28);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+    }
+
+    .blog-card > a {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .blog-card-media {
+      aspect-ratio: 16 / 10;
+      background: #dbeafe;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .blog-card-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(15, 23, 42, 0.18) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .blog-card:hover .blog-card-media::after {
+      opacity: 1;
+    }
+
+    .blog-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.55s ease;
+    }
+
+    .blog-card:hover .blog-card-media img {
+      transform: scale(1.05);
+    }
+
+    .blog-card-body {
+      padding: 18px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .blog-card-meta {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .blog-card-title {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.32;
+      color: #0f172a;
+    }
+
+    .blog-card-excerpt {
+      margin: 0;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .blog-card-more {
+      margin-top: 6px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--blue);
+      transition: letter-spacing 0.2s ease;
+    }
+
+    .blog-card:hover .blog-card-more {
+      letter-spacing: 0.02em;
+    }
+
+    /* Featured lead story — breaks the “same card” rhythm */
+    .blog-card--featured {
+      grid-column: 1 / -1;
+      background:
+        linear-gradient(135deg, #ffffff 0%, #f4f8fd 100%);
+    }
+
+    .blog-card--featured > a {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      align-items: stretch;
+      min-height: 320px;
+    }
+
+    .blog-card--featured .blog-card-media {
+      aspect-ratio: auto;
+      min-height: 320px;
+      height: 100%;
+    }
+
+    .blog-card--featured .blog-card-body {
+      padding: 36px 36px 36px 32px;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .blog-card--featured .blog-card-title {
+      font-size: clamp(22px, 2.6vw, 30px);
+      max-width: 20ch;
+    }
+
+    .blog-card--featured .blog-card-excerpt {
+      font-size: 15px;
+      max-width: 42ch;
+    }
+
+    .blog-card--featured .blog-card-more {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 860px) {
+      .blog-card--featured > a {
+        grid-template-columns: 1fr;
+        min-height: 0;
+      }
+      .blog-card--featured .blog-card-media {
+        min-height: 220px;
+        aspect-ratio: 16 / 10;
+      }
+      .blog-card--featured .blog-card-body {
+        padding: 22px 20px 24px;
+      }
+    }
+
+    .blog-pagination {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 32px 0 8px;
+      flex-wrap: wrap;
+    }
+
+    .blog-pagination.is-visible {
+      display: flex;
+    }
+
+    .blog-page-btn {
+      min-width: 42px;
+      height: 42px;
+      padding: 0 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+      background: #fff;
+      color: #334155;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+    }
+
+    .blog-page-btn:hover:not(:disabled) {
+      border-color: rgba(14, 122, 217, 0.4);
+      color: var(--blue);
+    }
+
+    .blog-page-btn.is-active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .blog-page-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .blog-page-info {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 600;
+      min-width: 90px;
+      text-align: center;
+    }
+
+    .blog-page-numbers {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .blog-empty {
+      grid-column: 1 / -1;
+      padding: 28px 8px;
+      max-width: 560px;
+    }
+
+    .blog-empty h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .blog-empty p {
+      margin: 0;
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Full-bleed CTA — not another identical card box */
+    .blog-cta {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0;
+      color: #fff;
+      background: #0b1220;
+    }
+
+    .blog-cta-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(100deg, rgba(5, 8, 20, 0.9) 0%, rgba(8, 80, 145, 0.72) 55%, rgba(14, 122, 217, 0.55) 100%),
+        url("assets/project1.jpeg") center / cover no-repeat;
+    }
+
+    .blog-cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+    }
+
+    .blog-cta h2 {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 3.2vw, 34px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .blog-cta p {
+      margin: 0 0 22px;
+      font-size: 16px;
+      color: rgba(226, 232, 240, 0.9);
+      max-width: 440px;
+      line-height: 1.55;
+    }
+
+    .blog-cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .blog-cta .btn-white {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 22px;
+      border-radius: 10px;
+      background: #ffffff;
+      color: var(--blue-dark);
+      font-weight: 800;
+      font-size: 15px;
+      transition: transform 0.18s ease, background 0.18s ease;
+    }
+
+    .blog-cta .btn-white:hover {
+      background: #f0f9ff;
+      transform: translateY(-1px);
+    }
+
+    .blog-cta .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 22px;
+      border-radius: 10px;
+      border: 1.5px solid rgba(255, 255, 255, 0.45);
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(6px);
+    }
+
+    .blog-cta .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .blog-hero-bg,
+      .blog-hero-copy,
+      .blog-card,
+      .blog-card-media img {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* ===== Footer (zelfde als homepage) ===== */
+    .site-footer {
+      background: var(--footer-bg);
+      color: #e5e7eb;
+      padding-top: 50px;
+      padding-bottom: 26px;
+      border-top: 1px solid var(--footer-border);
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr 1.2fr 1fr 1.4fr;
+      gap: 22px;
+      font-size: 13px;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 1100px) {
+      .footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 640px) {
+      .footer-inner { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    .footer-brand { max-width: 260px; }
+
+    .footer-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 11px;
+      background: radial-gradient(circle at 0% 0%, #60a5fa 0, #0E7AD9 40%, #075985 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .footer-brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .footer-brand-text {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .footer-text {
+      color: rgba(148, 163, 184, 0.9);
+      font-size: 12px;
+    }
+
+    .footer-heading {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 13px;
+    }
+
+    .footer-links a {
+      color: rgba(209, 213, 219, 0.9);
+      transition: color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+      transform: translateX(2px);
+    }
+
+    .footer-links span {
+      color: rgba(148, 163, 184, 0.9);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-top: 18px;
+      border-top: 1px solid var(--footer-border);
+      font-size: 12px;
+      color: rgba(148, 163, 184, 0.9);
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-legal-links a,
+    .footer-bottom a {
+      color: rgba(209, 213, 219, 0.95);
+    }
+
+    .footer-legal-links a:hover,
+    .footer-bottom a:hover {
+      color: #ffffff;
+    }
+
+    .phone-fab {
+      display: none;
+    }
+
+    @media (max-width: 960px) {
+      .phone-fab {
+        display: flex;
+        position: fixed;
+        z-index: 99985;
+        right: max(16px, env(safe-area-inset-right, 0px));
+        bottom: max(20px, env(safe-area-inset-bottom, 0px));
+        width: 56px;
+        height: 56px;
+        border-radius: 999px;
+        background: var(--blue);
+        box-shadow: 0 8px 28px rgba(14, 122, 217, 0.35);
+        color: #ffffff;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .phone-fab svg {
+        width: 26px;
+        height: 26px;
+        fill: #ffffff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="page" class="site page-shell">
+    <header id="masthead" class="site-header header--on-dark" role="banner">
+      <div class="container site-header-inner">
+        <button class="nav-toggle" type="button" aria-label="Open navigatie" aria-expanded="false" aria-controls="mobileMenu">
+          <div class="nav-toggle-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <a class="brand" href="index.html">
+          <div class="brand-mark">
+            <img src="assets/cg-painting-logo.png" alt="CG Painting logo" />
+          </div>
+          <span>CG Painting</span>
+        </a>
+        <nav class="nav">
+          <div class="nav-links">
+            <a href="index.html#diensten">Diensten</a>
+            <a href="index.html#realisaties">Realisaties</a>
+            <a href="index.html#werkwijze">Werkwijze</a>
+            <a href="blog.html" class="is-active" aria-current="page">Blog</a>
+            <a href="index.html#contact">Contact</a>
+          </div>
+        </nav>
+        <div class="nav-ctas">
+          <a href="tel:+32478784833" class="btn-primary">
+            <span class="nav-cta-phone-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.02l-2.2 2.19z"/></svg>
+            </span>
+            <span>Maak een afspraak</span>
+          </a>
+          <a href="index.html#contact" class="nav-cta-phone">Gratis offerte</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigatie">
+      <div class="mobile-menu-inner">
+        <nav class="mobile-menu-nav">
+          <a href="index.html#diensten">Diensten</a>
+          <a href="index.html#realisaties">Realisaties</a>
+          <a href="index.html#werkwijze">Werkwijze</a>
+          <a href="blog.html" class="is-active" aria-current="page">Blog</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="mobile-menu-ctas">
+          <a href="tel:+32478784833" class="btn-primary">
+            <span class="nav-cta-phone-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.02l-2.2 2.19z"/></svg>
+            </span>
+            <span>Maak een afspraak</span>
+          </a>
+          <a href="index.html#contact" class="nav-cta-phone">Gratis offerte</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main" class="site-main" role="main">
+      <section class="blog-hero alignfull" aria-label="Blog hero">
+        <div class="blog-hero-bg" aria-hidden="true"></div>
+        <div class="container blog-hero-inner">
+          <div class="blog-hero-copy">
+            <p class="blog-brand">CG Painting</p>
+            <p class="blog-eyebrow">Blog</p>
+            <h1 class="blog-hero-title">Tips &amp; inspiratie voor schilderwerken</h1>
+            <p class="blog-hero-subtitle">
+              Praktische gidsen en lokale tips voor woningen in Limburg en Vlaams-Brabant.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog-section">
+        <div class="container">
+          <div class="blog-section-head">
+            <div>
+              <h2>Artikelen &amp; lokale gidsen</h2>
+              <p>Korte, nuttige stukken over schilderwerken, kwaliteit en uw regio.</p>
+            </div>
+          </div>
+          <div class="blog-grid" id="blogList">
+            <article class="blog-card">
+              <a href="blog/schilderwerken-hasselt.html">
+                <div class="blog-card-media">
+                  <img src="assets/project5.jpeg" alt="Professionele schilderwerken in Hasselt" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Hasselt · Lokaal</span>
+                  <h2 class="blog-card-title">Schilderwerken Hasselt — professionele schilder</h2>
+                  <p class="blog-card-excerpt">
+                    Schilderwerken in Hasselt: muren, plafonds en woningen. Heldere offerte en gratis plaatsbezoek.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/schilder-bree-oudsbergen.html">
+                <div class="blog-card-media">
+                  <img src="assets/project1.jpeg" alt="Schilderwerken in Bree en Oudsbergen" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Bree · Oudsbergen</span>
+                  <h2 class="blog-card-title">Schilder in Bree en Oudsbergen</h2>
+                  <p class="blog-card-excerpt">
+                    Professionele schilderwerken voor woningen in Bree en Oudsbergen. Vraag vrijblijvend een offerte aan.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/schilder-maaseik.html">
+                <div class="blog-card-media">
+                  <img src="assets/project6.jpeg" alt="Professionele schilderwerken voor woningen in Maaseik" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Maaseik · Lokaal</span>
+                  <h2 class="blog-card-title">Schilder Maaseik — professionele schilderwerken</h2>
+                  <p class="blog-card-excerpt">
+                    Schilderwerken in Maaseik: muren, plafonds en interieurs. Heldere offerte en gratis plaatsbezoek.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/goede-schilder-kiezen.html">
+                <div class="blog-card-media">
+                  <img src="assets/project4.jpeg" alt="Gids: hoe kiest u een goede schilder voor uw woning" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Gids · Kiezen</span>
+                  <h2 class="blog-card-title">Hoe kiest u een goede schilder voor uw woning?</h2>
+                  <p class="blog-card-excerpt">
+                    Waarop letten bij offertes, voorbereiding en afwerking — en hoe vraagt u een offerte aan.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/muren-plafonds-laten-schilderen.html">
+                <div class="blog-card-media">
+                  <img src="assets/project3.jpeg" alt="Muren en plafonds laten schilderen — professioneel binnenschilderwerk" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Dienst · Binnen</span>
+                  <h2 class="blog-card-title">Muren en plafonds laten schilderen</h2>
+                  <p class="blog-card-excerpt">
+                    Professioneel binnenschilderwerk: voorbereiding, uitvoering en nette afwerking. Vraag uw offerte aan.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/wat-kost-een-schilder.html">
+                <div class="blog-card-media">
+                  <img src="assets/project1.jpeg" alt="Uitleg over de prijs van een schilder en schilderwerken" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Prijs · Gids</span>
+                  <h2 class="blog-card-title">Wat kost een schilder? Prijs schilderwerken uitgelegd</h2>
+                  <p class="blog-card-excerpt">
+                    Welke factoren bepalen de prijs? Lees de uitleg en vraag vrijblijvend een offerte aan.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/schilder-maasmechelen.html">
+                <div class="blog-card-media">
+                  <img src="assets/project5.jpeg" alt="Professionele schilderwerken voor woningen in Maasmechelen" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Maasmechelen · Lokaal</span>
+                  <h2 class="blog-card-title">Schilder Maasmechelen — professionele schilderwerken</h2>
+                  <p class="blog-card-excerpt">
+                    Schilderwerken in Maasmechelen: muren, plafonds en interieurs. Heldere offerte en gratis plaatsbezoek.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/kosten-schilder-limburg.html">
+                <div class="blog-card-media">
+                  <img src="assets/project2.jpeg" alt="Gids over de kosten van een schilder in Limburg" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Limburg · Kosten</span>
+                  <h2 class="blog-card-title">Wat kost een schilder in Limburg?</h2>
+                  <p class="blog-card-excerpt">
+                    Welke factoren bepalen de prijs van schilderwerken? Lees de gids en vraag vrijblijvend een offerte aan.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/schilder-bocholt.html">
+                <div class="blog-card-media">
+                  <img src="assets/project4.jpeg" alt="Professionele schilderwerken voor woningen in Bocholt" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Bocholt · Lokaal</span>
+                  <h2 class="blog-card-title">Schilder Bocholt — professionele schilderwerken</h2>
+                  <p class="blog-card-excerpt">
+                    Schilderwerken in Bocholt: muren, plafonds en interieurs. Heldere offerte en gratis plaatsbezoek.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/schilder-peer.html">
+                <div class="blog-card-media">
+                  <img src="assets/project3.jpeg" alt="Professionele schilderwerken voor woningen in Peer" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Peer · Lokaal</span>
+                  <h2 class="blog-card-title">Schilder Peer — professionele schilderwerken</h2>
+                  <p class="blog-card-excerpt">
+                    Schilderwerken in Peer: muren, plafonds en interieurs. Heldere offerte en gratis plaatsbezoek.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/professionele-schilderwerken-bree.html">
+                <div class="blog-card-media">
+                  <img src="assets/project2.jpeg" alt="Professionele binnenschilderwerken met verzorgde afwerking" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Bree · Kwaliteit</span>
+                  <h2 class="blog-card-title">Professionele schilderwerken Bree — verzorgde afwerking</h2>
+                  <p class="blog-card-excerpt">
+                    Wat maakt goed schilderwerk? Voorbereiding, muren &amp; plafonds en een nette oplevering. Vraag uw offerte aan.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/schilder-zutendaal.html">
+                <div class="blog-card-media">
+                  <img src="assets/project6.jpeg" alt="Professionele schilderwerken voor woningen in Zutendaal" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Zutendaal · Lokaal</span>
+                  <h2 class="blog-card-title">Schilder Zutendaal — professionele schilderwerken</h2>
+                  <p class="blog-card-excerpt">
+                    Schilderwerken in Zutendaal met zorgvuldige voorbereiding en nette afwerking. Gratis plaatsbezoek.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/schilder-bree.html">
+                <div class="blog-card-media">
+                  <img src="assets/project4.jpeg" alt="Professionele schilderwerken voor woningen in Bree" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Bree · Lokaal</span>
+                  <h2 class="blog-card-title">Schilder Bree — verzorgde professionele afwerking</h2>
+                  <p class="blog-card-excerpt">
+                    Muren en plafonds laten schilderen in Bree. Nette voorbereiding, heldere offerte en gratis plaatsbezoek.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/schilder-as.html">
+                <div class="blog-card-media">
+                  <img src="assets/project5.jpeg" alt="Professionele schilderwerken voor woningen in As" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">As · Lokaal</span>
+                  <h2 class="blog-card-title">Schilder As — professionele afwerking voor uw woning</h2>
+                  <p class="blog-card-excerpt">
+                    Schilderwerken in As en Niel-bij-As. Nette voorbereiding, heldere offerte en gratis plaatsbezoek.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/schilder-oudsbergen.html">
+                <div class="blog-card-media">
+                  <img src="assets/project3.jpeg" alt="Schilder Oudsbergen – professionele schilderwerken" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Oudsbergen · Lokaal</span>
+                  <h2 class="blog-card-title">Schilder Oudsbergen — professionele schilderwerken</h2>
+                  <p class="blog-card-excerpt">
+                    Lokaal schilderbedrijf in Oudsbergen. Nette voorbereiding, strakke afwerking en gratis plaatsbezoek.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/beste-schilderwerken-opglabbeek.html">
+                <div class="blog-card-media">
+                  <img src="assets/project4.jpeg" alt="Beste schilderwerken Opglabbeek – strak interieur" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Opglabbeek · Kwaliteit</span>
+                  <h2 class="blog-card-title">Beste schilderwerken in Opglabbeek — kwaliteit die blijft</h2>
+                  <p class="blog-card-excerpt">
+                    Waar herkent u écht goede schilderwerken? Lokaal team, nette afwerking en heldere prijs — gratis plaatsbezoek.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog/schilderwerken-opglabbeek.html">
+                <div class="blog-card-media">
+                  <img src="assets/project1.jpeg" alt="Schilderwerken Opglabbeek – interieur realisatie" loading="lazy" width="640" height="400" />
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-card-meta">Opglabbeek · Lokaal</span>
+                  <h2 class="blog-card-title">Schilderwerken in Opglabbeek — strak resultaat, dichtbij huis</h2>
+                  <p class="blog-card-excerpt">
+                    Lokaal team vanuit Oudsbergen. Gratis plaatsbezoek, nette afscherming en duidelijke planning.
+                  </p>
+                  <span class="blog-card-more">Bekijk pagina →</span>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <nav class="blog-pagination" id="blogPagination" aria-label="Blog pagina's" hidden>
+            <button type="button" class="blog-page-btn" id="blogPrev" aria-label="Vorige pagina">←</button>
+            <div class="blog-page-numbers" id="blogPageNumbers"></div>
+            <button type="button" class="blog-page-btn" id="blogNext" aria-label="Volgende pagina">→</button>
+            <span class="blog-page-info" id="blogPageInfo"></span>
+          </nav>
+        </div>
+      </section>
+
+      <section class="blog-cta alignfull" aria-label="Contact CTA">
+        <div class="blog-cta-bg" aria-hidden="true"></div>
+        <div class="container blog-cta-inner">
+          <h2>Klaar voor een strak resultaat?</h2>
+          <p>Gratis offerte of afspraak aan huis — bel of vul het formulier in.</p>
+          <div class="blog-cta-actions">
+            <a class="btn-white" href="index.html#contact">Gratis offerte aanvragen</a>
+            <a class="btn-ghost" href="tel:+32478784833">Bel 0478 78 48 33</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="colophon" class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <div class="footer-brand-row">
+              <div class="footer-brand-mark">
+                <img src="assets/cg-painting-logo.png" alt="CG Painting logo" />
+              </div>
+              <div class="footer-brand-text">CG Painting BV</div>
+            </div>
+            <p class="footer-text">
+              Professionele schilderwerken in Limburg en Vlaams-Brabant.
+              Vakmanschap met oog voor detail.
+            </p>
+          </div>
+
+          <div>
+            <div class="footer-heading">Diensten</div>
+            <div class="footer-links">
+              <a href="index.html#diensten">Schilderwerken</a>
+              <a href="index.html#diensten">Dunpleisteren</a>
+              <a href="index.html#diensten">Behangen</a>
+              <a href="index.html#diensten">Decor</a>
+              <a href="index.html#diensten">Renovatie werken</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Werkgebieden</div>
+            <div class="footer-links">
+              <a href="index.html#contact">Hasselt</a>
+              <a href="index.html#contact">Genk</a>
+              <a href="index.html#contact">Leuven</a>
+              <a href="index.html#contact">Sint-Truiden</a>
+              <a href="index.html#contact">Diest</a>
+              <a href="index.html#contact">En omstreken</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Info</div>
+            <div class="footer-links">
+              <a href="blog.html">Blog</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">CG PAINTING BV</div>
+            <div class="footer-links">
+              <a href="tel:+32478784833">0478 78 48 33</a>
+              <a href="mailto:hello@cgpainting.be">hello@cgpainting.be</a>
+              <span>Leyssenstraat 1, 3660 Oudsbergen</span>
+              <span>BTW BE1041274115</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© 2026 CG Painting BV. Alle rechten voorbehouden. · Gerealiseerd door <a href="https://valtexdigital.com" target="_blank" rel="noopener noreferrer">Valtex Digital</a></div>
+          <div class="footer-legal-links">
+            <a href="privacy.html">Privacybeleid</a>
+            <a href="algemene-voorwaarden.html">Algemene voorwaarden</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <a href="tel:+32478784833" class="phone-fab" aria-label="Bel CG Painting">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.02l-2.2 2.19z"/></svg>
+  </a>
+
+  <script>
+    (function () {
+      var siteHeader = document.getElementById("masthead");
+      var hero = document.querySelector(".blog-hero");
+
+      function onScrollHeader() {
+        if (!siteHeader) return;
+        if (siteHeader.classList.contains("header--nav-open")) return;
+        var threshold = hero ? Math.max(40, hero.offsetHeight * 0.35) : 40;
+        if (window.scrollY > threshold) {
+          siteHeader.classList.remove("header--on-dark");
+          siteHeader.classList.add("header--solid");
+        } else {
+          siteHeader.classList.add("header--on-dark");
+          siteHeader.classList.remove("header--solid");
+        }
+      }
+
+      window.addEventListener("scroll", onScrollHeader, { passive: true });
+      onScrollHeader();
+
+      var navToggle = document.querySelector(".nav-toggle");
+      var mobileMenu = document.getElementById("mobileMenu");
+      if (navToggle && mobileMenu) {
+        function closeMobileMenu() {
+          mobileMenu.classList.remove("mobile-menu--open");
+          navToggle.classList.remove("is-open");
+          navToggle.setAttribute("aria-expanded", "false");
+          navToggle.setAttribute("aria-label", "Open navigatie");
+          if (siteHeader) {
+            siteHeader.classList.remove("header--nav-open");
+            onScrollHeader();
+          }
+        }
+
+        function openMobileMenu() {
+          mobileMenu.classList.add("mobile-menu--open");
+          navToggle.classList.add("is-open");
+          navToggle.setAttribute("aria-expanded", "true");
+          navToggle.setAttribute("aria-label", "Menu sluiten");
+          if (siteHeader) {
+            siteHeader.classList.add("header--nav-open");
+            siteHeader.classList.remove("header--on-dark");
+            siteHeader.classList.add("header--solid");
+          }
+        }
+
+        navToggle.addEventListener("click", function () {
+          if (mobileMenu.classList.contains("mobile-menu--open")) closeMobileMenu();
+          else openMobileMenu();
+        });
+
+        mobileMenu.addEventListener("click", function (e) {
+          if (e.target === mobileMenu) closeMobileMenu();
+        });
+
+        mobileMenu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", closeMobileMenu);
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeMobileMenu();
+        });
+      }
+
+      /* Blog grid: 3 per row visually, max 6 per page */
+      var blogList = document.getElementById("blogList");
+      var blogPagination = document.getElementById("blogPagination");
+      var blogPageNumbers = document.getElementById("blogPageNumbers");
+      var blogPrev = document.getElementById("blogPrev");
+      var blogNext = document.getElementById("blogNext");
+      var blogPageInfo = document.getElementById("blogPageInfo");
+      var PER_PAGE = 6;
+      var blogPage = 1;
+
+      function getBlogCards() {
+        return blogList ? Array.prototype.slice.call(blogList.querySelectorAll(".blog-card")) : [];
+      }
+
+      function getTotalPages(cards) {
+        return Math.max(1, Math.ceil(cards.length / PER_PAGE));
+      }
+
+      function renderBlogPage(page) {
+        var cards = getBlogCards();
+        if (!cards.length || !blogPagination) return;
+        var totalPages = getTotalPages(cards);
+        blogPage = Math.min(Math.max(1, page), totalPages);
+        var start = (blogPage - 1) * PER_PAGE;
+        var end = start + PER_PAGE;
+
+        cards.forEach(function (card, i) {
+          if (i >= start && i < end) card.classList.remove("is-hidden");
+          else card.classList.add("is-hidden");
+        });
+
+        if (totalPages <= 1) {
+          blogPagination.hidden = true;
+          blogPagination.classList.remove("is-visible");
+          return;
+        }
+
+        blogPagination.hidden = false;
+        blogPagination.classList.add("is-visible");
+        if (blogPrev) blogPrev.disabled = blogPage <= 1;
+        if (blogNext) blogNext.disabled = blogPage >= totalPages;
+        if (blogPageInfo) blogPageInfo.textContent = "Pagina " + blogPage + " / " + totalPages;
+
+        if (blogPageNumbers) {
+          blogPageNumbers.innerHTML = "";
+          for (var p = 1; p <= totalPages; p++) {
+            (function (num) {
+              var btn = document.createElement("button");
+              btn.type = "button";
+              btn.className = "blog-page-btn" + (num === blogPage ? " is-active" : "");
+              btn.textContent = String(num);
+              btn.setAttribute("aria-label", "Ga naar pagina " + num);
+              if (num === blogPage) btn.setAttribute("aria-current", "page");
+              btn.addEventListener("click", function () {
+                renderBlogPage(num);
+                if (blogList) blogList.scrollIntoView({ behavior: "smooth", block: "start" });
+              });
+              blogPageNumbers.appendChild(btn);
+            })(p);
+          }
+        }
+      }
+
+      if (blogList) {
+        var params = new URLSearchParams(window.location.search);
+        var startPage = parseInt(params.get("page"), 10);
+        if (!startPage || startPage < 1) startPage = 1;
+        renderBlogPage(startPage);
+        if (blogPrev) {
+          blogPrev.addEventListener("click", function () {
+            renderBlogPage(blogPage - 1);
+            blogList.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        }
+        if (blogNext) {
+          blogNext.addEventListener("click", function () {
+            renderBlogPage(blogPage + 1);
+            blogList.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        }
+      }
+    })();
+  </script>
+<script>
+document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    gtagSendEvent(this.getAttribute("href"));
+  });
+});
+</script>
+</body>
+</html>

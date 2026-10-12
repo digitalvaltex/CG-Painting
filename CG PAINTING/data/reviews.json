@@ -1,0 +1,38 @@
+[
+    {
+        "id": "manual-houben-neerharen-20260418",
+        "created_at": "2026-04-18T12:00:00+02:00",
+        "naam": "Houben",
+        "plaats": "Neerharen",
+        "sterren": 5,
+        "tekst": "Wij zijn zeer tevreden over het schilderwerk dat bij ons is uitgevoerd. Christof en zijn team werkte nauwkeurig, netjes en met oog voor detail. Alles werd goed voorbereid en na afloop werd alles schoon en opgeruimd achtergelaten.\n\nDaarnaast was de communicatie duidelijk en prettig, en werden afspraken keurig nagekomen. Het resultaat is echt vakwerk en heeft onze verwachtingen overtroffen.\n\nWij zouden dit schildersbedrijf dan ook zeker aanbevelen aan anderen!",
+        "published": true
+    },
+    {
+        "id": "manual-santermans-lipkens-hasselt-20260513",
+        "created_at": "2026-05-13T13:20:00+02:00",
+        "naam": "Santermans-Lipkens",
+        "plaats": "Hasselt",
+        "sterren": 5,
+        "tekst": "Prachtig resultaat, kers op de taart na plaatsing van onze keuken. Aan alle wensen en afspraken is voldaan en dat in aangenaam en fijn overleg, kleurenadvies erbij. Na elke werkdag, werd alles supernetjes achtergelaten.\n\nAan de uitvoerders van het schilderwerk gewoon echt vakwerk.",
+        "published": true
+    },
+    {
+        "id": "manual-vandenbroeck-keunen-lummen-20260611",
+        "created_at": "2026-06-11T18:11:00+02:00",
+        "naam": "Vandenbroeck - Keunen",
+        "plaats": "Lummen",
+        "sterren": 5,
+        "tekst": "Christof en zijn team hebben uitstekend werk verricht. Het eindresultaat is verbluffend mooi en alles is prachtig in detail afgewerkt. Voor toekomstige schilderwerken is er voor ons maar één adres. Echte vakmensen.",
+        "published": true
+    },
+    {
+        "id": "manual-cypers-ivan-josiane-alken-20260701",
+        "created_at": "2026-07-01T09:41:00+02:00",
+        "naam": "Cypers Ivan en Josiane",
+        "plaats": "Alken",
+        "sterren": 5,
+        "tekst": "Christof en zijn team hebben zéér mooi werk afgeleverd. Wij zijn heel tevreden. Alles werd netjes en proper achtergelaten. Ondanks de hitte bleven zij met de glimlach doorwerken tot een perfect resultaat. Chapeau en bedankt Christof en je team! We vragen jullie zeker terug bij ons volgend project!",
+        "published": true
+    }
+]

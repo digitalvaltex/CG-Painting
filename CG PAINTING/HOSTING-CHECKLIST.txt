@@ -1,0 +1,35 @@
+============================================
+  ЩО ЗАЛИТИ НА ХОСТИНГ (Hostinger / FTP / ZIP)
+============================================
+
+ВАЖЛИВО — Hostinger “Migratie” / ZIP:
+  Не додавайте файли .py, .tsm, .aspx — імпорт їх БЛОКУЄ.
+  У цьому проєкті раніше був local-dev/app.py; його прибрано.
+  Локальний Flask збережено як local-dev/flask-local-SAVE-AS-app-py.txt
+
+У ZIP (корінь сайту = public_html) покладіть:
+
+  [ ] index.html
+  [ ] send.php
+  [ ] send-review.php
+  [ ] get-reviews.php
+  [ ] call.php
+  [ ] calendar-add.php
+  [ ] privacy.html
+  [ ] algemene-voorwaarden.html
+  [ ] sitemap.xml
+  [ ] robots.txt
+  [ ] папка assets/  (усі зображення, відео, partners/)
+  [ ] папка includes/  (reviews-lib.php)
+  [ ] папка data/      (reviews.json + .htaccess; права на запис для PHP)
+
+Не обов’язково (можна не класти):
+  - backups/, wordpress/ (якщо не WP-сайт)
+  - index-pravka-*.html, PRAVKA-*.txt, *.md документація
+  - local-dev/ — взагалі не потрібна на сервері (лише для тесту вдома)
+
+Після заливки: https://ваш-домен/
+Форма → send.php · Відгуки → send-review.php + data/reviews.json
+
+Детально: DEPLOY.md
+============================================

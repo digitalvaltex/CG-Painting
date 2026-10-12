@@ -1,0 +1,13 @@
+# Video MIME types (sommige shared hosts sturen .mp4 als text/plain → mobiel toont alleen poster)
+<IfModule mod_mime.c>
+  AddType video/mp4 .mp4
+  AddType video/mp4 .MP4
+  AddType video/webm .webm
+</IfModule>
+
+# Optioneel: byte-range voor streaming (Apache 2.4+)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(mp4|MP4|webm|WEBM)$">
+    Header set Accept-Ranges bytes
+  </FilesMatch>
+</IfModule>
